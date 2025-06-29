@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Агрегований звіт</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <button onclick="location.href='index.html'">Зареєструвати пацієнта</button>
+        <h1>Агрегований звіт</h1>
+        <form id="agg-form">
+            <label>Показник для аналізу*
+                <select name="metric" required>
+                    <option value="">Оберіть</option>
+                    <option value="weight">Вага</option>
+                    <option value="height">Зріст</option>
+                    <option value="bmi">ІМТ</option>
+                </select>
+            </label>
+            <button type="submit">Отримати звіт</button>
+        </form>
+
+        <div id="agg-success" style="display: none;">
+            <p>Середнє значення: <strong id="result-value"></strong></p>
+            <button id="download-agg-pdf">Завантажити звіт (PDF)</button>
+        </div>
+    </main>
+
+    <script type="module" src="report.js"></script>
+</body>
+
+</html>
