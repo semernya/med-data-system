@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Реєстрація пацієнта</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Реєстрація пацієнта</h1>
+        <form id="patient-form">
+            <label>Ім’я* <input type="text" name="firstName" required /></label>
+            <label>Прізвище* <input type="text" name="lastName" required /></label>
+            <label>Дата народження* <input type="date" name="birthDate" required /></label>
+            <label>Стать*
+                <select name="gender" required>
+                    <option value="">Оберіть</option>
+                    <option value="Чоловіча">Чоловіча</option>
+                    <option value="Жіноча">Жіноча</option>
+                    <option value="Інше">Інше</option>
+                </select>
+            </label>
+            <label>Номер телефону <input type="tel" name="phone" /></label>
+            <label>Зріст (см)* <input type="number" name="height" required /></label>
+            <label>Вага (кг)* <input type="number" name="weight" required /></label>
+            <label>Коментар <textarea name="note"></textarea></label>
+
+            <button type="submit">Зберегти</button>
+        </form>
+
+        <div id="success-section" style="display: none;">
+            <p>Пацієнта збережено успішно.</p>
+            <button id="generate-pdf">Отримати звіт (PDF)</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
